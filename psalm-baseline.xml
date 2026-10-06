@@ -394,9 +394,6 @@
       <code><![CDATA[$sm['service_manager']]]></code>
       <code><![CDATA[is_object($serviceManager) ? $serviceManager::class : gettype($serviceManager)]]></code>
     </MixedArgument>
-    <MixedArgumentTypeCoercion>
-      <code><![CDATA[$key]]></code>
-    </MixedArgumentTypeCoercion>
     <MixedArrayAccess>
       <code><![CDATA[$configs['configuration_classes']]]></code>
       <code><![CDATA[$sm['module_class_interface']]]></code>

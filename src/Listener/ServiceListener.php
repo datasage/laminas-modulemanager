@@ -20,7 +20,7 @@ use function is_object;
 use function is_scalar;
 use function is_string;
 use function method_exists;
-use function spl_object_hash;
+use function spl_object_id;
 use function sprintf;
 
 class ServiceListener implements ServiceListenerInterface
@@ -76,7 +76,7 @@ class ServiceListener implements ServiceListenerInterface
         if (is_string($serviceManager)) {
             $smKey = $serviceManager;
         } elseif ($serviceManager instanceof ServiceManager) {
-            $smKey = spl_object_hash($serviceManager);
+            $smKey = spl_object_id($serviceManager);
         } else {
             throw new Exception\RuntimeException(sprintf(
                 'Invalid service manager provided, expected ServiceManager or string, %s provided',
@@ -279,7 +279,7 @@ class ServiceListener implements ServiceListenerInterface
     /**
      * Merge all configuration for a given service manager to a single array.
      *
-     * @param string $key Named service manager
+     * @param int|string $key Named service manager key
      * @param array $metadata Service manager metadata
      * @param array $config Merged configuration
      * @return array Service manager-specific configuration
