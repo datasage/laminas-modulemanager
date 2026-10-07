@@ -37,7 +37,7 @@
         "amphp/dns": "^2.4",
         "amphp/socket": "^2.4",
         "laminas/laminas-coding-standard": "^3.1",
-        "laminas/laminas-mvc": "^3.8.0 || ^4.0",
+        "laminas/laminas-mvc": "^4.0",
         "laminas/laminas-servicemanager": "^3.23.0",
         "phpunit/phpunit": "^11.0 || ^12.0 || ^13.0",
         "psalm/plugin-phpunit": "^0.19.5",
@@ -75,5 +75,11 @@
     "conflict": {
         "zendframework/zend-modulemanager": "*",
         "amphp/amp": "<2.6.4"
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/datasage/laminas-mvc"
+        }
+    ]
 }
